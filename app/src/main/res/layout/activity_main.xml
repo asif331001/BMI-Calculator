@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:background="@color/skyBlue"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                >
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/maleCard"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    app:cardElevation="8dp"
+                    app:cardCornerRadius="8dp"
+                    android:layout_margin="10dp"
+                    >
+                    <LinearLayout
+                        android:id="@+id/maleLL"
+                        android:background="@color/white"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        >
+
+                    <ImageView
+                        android:id="@+id/maleImg"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:scaleType="fitXY"
+                         android:src="@drawable/man_24"
+                        />
+                    <TextView
+                        android:id="@+id/maleTxt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Male"
+                        android:textSize="20sp"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/femaleCard"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:cardElevation="8dp"
+                    app:cardCornerRadius="8dp"
+                    android:layout_margin="10dp"
+                    >
+                    <LinearLayout
+                        android:background="@color/white"
+                        android:id="@+id/femaleLL"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        >
+
+                        <ImageView
+                            android:id="@+id/femaleImg"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/woman_24"
+                            />
+                        <TextView
+                            android:id="@+id/femaleTxt"
+                            android:gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Female"
+                            android:textSize="20sp"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                android:text="তোমার বয়স কত?"
+                />
+
+            <EditText
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:textColorHint="#989898"
+                android:id="@+id/edAge"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Age >= 20"
+                android:layout_margin="10dp"
+                android:background="@color/white"
+                android:lines="2"
+                />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                android:text="তোমার ওজন কত?"
+                />
+
+            <EditText
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:id="@+id/edWeight"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Weight in kg"
+                android:layout_margin="10dp"
+                android:textColorHint="#989898"
+                android:background="@color/white"
+                android:lines="2"
+                />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                android:text="তোমার উচ্চতা কত?"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                >
+                <EditText
+                    android:inputType="number"
+                    android:textColor="@color/black"
+                    android:textColorHint="#989898"
+                    android:id="@+id/edFeet"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:hint="Feet"
+                    android:layout_margin="10dp"
+                    android:background="@color/white"
+                    android:lines="2"
+                    />
+
+                <EditText
+                    android:inputType="number"
+                    android:textColor="@color/black"
+                    android:textColorHint="#989898"
+                    android:id="@+id/edInch"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:hint="Inch"
+                    android:layout_margin="10dp"
+                    android:background="@color/white"
+                    android:lines="2"
+                    />
+
+            </LinearLayout>
+
+
+
+
+
+
+            <Button
+                android:id="@+id/btnResult"
+                android:backgroundTint="@color/darkBlue"
+ android:textColor="@color/white"
+                android:layout_margin="10dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="BMI হিসাব করুন"
+                />
+
+
+            <TextView
+                android:id="@+id/tvResult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text=""
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_margin="10dp"
+                />
+
+            <ImageView
+                android:id="@+id/img"
+                android:visibility="gone"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:src="@drawable/bmi_categories"
+                />
+
+
+
+        </LinearLayout>
+
+
+
+
+    </ScrollView>
+
+
+
+</LinearLayout>
