@@ -15,6 +15,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.airbnb.lottie.LottieAnimationView;
+
 public class MainActivity extends AppCompatActivity {
 
     EditText edWeight, edFeet, edInch, edAge;
@@ -26,11 +28,18 @@ public class MainActivity extends AppCompatActivity {
 
     LinearLayout maleLL, femaleLL;
 
+    LottieAnimationView fat, normal, thin;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        fat = findViewById(R.id.cat_workout);
+        thin = findViewById(R.id.eating_cat);
+        normal = findViewById(R.id.party_cat);
+
 
         edWeight = findViewById(R.id.edWeight);
         edFeet = findViewById(R.id.edFeet);
@@ -98,30 +107,58 @@ public class MainActivity extends AppCompatActivity {
                             tvResult.setText("তোমার BMI Index: " + bmiIndex + "\n তুমি তো অনেক বেশিই শুকনা, বেশি বেশি পুষ্টিকর খাবার খাও, না হলে ফু দিলেই তো উরে যাবা");
                             tvResult.setTextColor(getResources().getColor(R.color.lg));
                             img.setVisibility(View.VISIBLE);
+
+                            thin.setVisibility(View.VISIBLE);
+                            normal.setVisibility(View.INVISIBLE);
+                            fat.setVisibility(View.INVISIBLE);
                         } else if (bmiIndex > 12 && bmiIndex < 18.6) {
                             tvResult.setText("তোমার BMI Index: " + bmiIndex + "\n তুমি অনেক শুকনা, বেশি বেশি পুষ্টিকর খাবার খাও");
                             tvResult.setTextColor(getResources().getColor(R.color.lgreen));
                             img.setVisibility(View.VISIBLE);
+
+                            thin.setVisibility(View.VISIBLE);
+                            normal.setVisibility(View.INVISIBLE);
+                            fat.setVisibility(View.INVISIBLE);
                         } else if (bmiIndex > 18.6 && bmiIndex < 25) {
                             tvResult.setText("তোমার BMI Index: " + bmiIndex + "\n খুব ভাল, তুমি পারফেক্ট");
                             tvResult.setTextColor(getResources().getColor(R.color.green));
                             img.setVisibility(View.VISIBLE);
+
+                            normal.setVisibility(View.VISIBLE);
+                            fat.setVisibility(View.INVISIBLE);
+                            thin.setVisibility(View.INVISIBLE);
                         } else if (bmiIndex > 25 && bmiIndex < 30) {
                             tvResult.setText("তোমার BMI Index: " + bmiIndex + "\n তুমি মোটা ব্যায়াম কর, ওজন কমাও");
                             tvResult.setTextColor(getResources().getColor(R.color.ylw));
                             img.setVisibility(View.VISIBLE);
+
+                            fat.setVisibility(View.VISIBLE);
+                            thin.setVisibility(View.INVISIBLE);
+                            normal.setVisibility(View.INVISIBLE);
                         } else if (bmiIndex > 30 && bmiIndex < 35) {
                             tvResult.setText("তোমার BMI Index: " + bmiIndex + "\n তুমি অনেক মোটা, কম কম খাও আর ব্যায়াম কর");
                             tvResult.setTextColor(getResources().getColor(R.color.orng));
                             img.setVisibility(View.VISIBLE);
+
+                            fat.setVisibility(View.VISIBLE);
+                            thin.setVisibility(View.INVISIBLE);
+                            normal.setVisibility(View.INVISIBLE);
                         } else if (bmiIndex > 35 && bmiIndex < 40) {
                             tvResult.setText("তোমার BMI Index: " + bmiIndex + "\n তুমি অনেক বেশি মোটা, কম কম খাও আর বেশি বেশি ব্যায়াম কর");
                             tvResult.setTextColor(getResources().getColor(R.color.red));
                             img.setVisibility(View.VISIBLE);
+
+                            fat.setVisibility(View.VISIBLE);
+                            thin.setVisibility(View.INVISIBLE);
+                            normal.setVisibility(View.INVISIBLE);
                         } else if (bmiIndex > 40) {
                             tvResult.setText("তোমার BMI Index: " + bmiIndex + "\n তুমি অনেক অনেক বেশি মোটা, কম কম খাও আর বেশি বেশি ব্যায়াম কর, please, ওজন কমাও ");
                             tvResult.setTextColor(getResources().getColor(R.color.vlt));
                             img.setVisibility(View.VISIBLE);
+
+                            fat.setVisibility(View.VISIBLE);
+                            thin.setVisibility(View.INVISIBLE);
+                            normal.setVisibility(View.INVISIBLE);
                         }
 
                     } else {

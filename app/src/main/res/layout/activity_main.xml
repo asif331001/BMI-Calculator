@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/skyBlue"
     android:orientation="vertical"
     android:padding="10dp"
-    android:background="@color/skyBlue"
     tools:context=".MainActivity">
 
     <ScrollView
@@ -16,53 +16,49 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            >
+            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:weightSum="2"
-                >
+                android:weightSum="2">
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/maleCard"
-                    android:layout_weight="1"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-
-                    app:cardElevation="8dp"
-                    app:cardCornerRadius="8dp"
                     android:layout_margin="10dp"
-                    >
+
+                    android:layout_weight="1"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="8dp">
+
                     <LinearLayout
                         android:id="@+id/maleLL"
-                        android:background="@color/white"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:gravity="center"
                         android:layout_gravity="center"
-                        >
-
-                    <ImageView
-                        android:id="@+id/maleImg"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:scaleType="fitXY"
-                         android:src="@drawable/man_24"
-                        />
-                    <TextView
-                        android:id="@+id/maleTxt"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:background="@color/white"
                         android:gravity="center"
-                        android:text="Male"
-                        android:textSize="20sp"
-                        android:textColor="@color/black"
-                        android:textStyle="bold"
-                        />
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/maleImg"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/man_24" />
+
+                        <TextView
+                            android:id="@+id/maleTxt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Male"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
 
                     </LinearLayout>
 
@@ -70,40 +66,38 @@
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/femaleCard"
-                    android:layout_weight="1"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    app:cardElevation="8dp"
-                    app:cardCornerRadius="8dp"
                     android:layout_margin="10dp"
-                    >
+                    android:layout_weight="1"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="8dp">
+
                     <LinearLayout
-                        android:background="@color/white"
                         android:id="@+id/femaleLL"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:gravity="center"
                         android:layout_gravity="center"
-                        >
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:orientation="vertical">
 
                         <ImageView
                             android:id="@+id/femaleImg"
                             android:layout_width="100dp"
                             android:layout_height="100dp"
                             android:scaleType="fitXY"
-                            android:src="@drawable/woman_24"
-                            />
+                            android:src="@drawable/woman_24" />
+
                         <TextView
                             android:id="@+id/femaleTxt"
-                            android:gravity="center"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:gravity="center"
                             android:text="Female"
-                            android:textSize="20sp"
                             android:textColor="@color/black"
-                            android:textStyle="bold"
-                            />
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
 
                     </LinearLayout>
 
@@ -116,24 +110,22 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="10dp"
-                android:textSize="20dp"
-                android:textColor="@color/black"
                 android:text="তোমার বয়স কত?"
-                />
+                android:textColor="@color/black"
+                android:textSize="20dp" />
 
             <EditText
-                android:inputType="number"
-                android:textColor="@color/black"
-                android:textColorHint="#989898"
                 android:id="@+id/edAge"
-                android:gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Age >= 20"
                 android:layout_margin="10dp"
                 android:background="@color/white"
+                android:gravity="center"
+                android:hint="Age >= 20"
+                android:inputType="number"
                 android:lines="2"
-                />
+                android:textColor="@color/black"
+                android:textColorHint="#989898" />
 
 
             <TextView
@@ -142,24 +134,22 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="10dp"
-                android:textSize="20dp"
-                android:textColor="@color/black"
                 android:text="তোমার ওজন কত?"
-                />
+                android:textColor="@color/black"
+                android:textSize="20dp" />
 
             <EditText
-                android:inputType="number"
-                android:textColor="@color/black"
                 android:id="@+id/edWeight"
-                android:gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Weight in kg"
                 android:layout_margin="10dp"
-                android:textColorHint="#989898"
                 android:background="@color/white"
+                android:gravity="center"
+                android:hint="Weight in kg"
+                android:inputType="number"
                 android:lines="2"
-                />
+                android:textColor="@color/black"
+                android:textColorHint="#989898" />
 
 
             <TextView
@@ -168,97 +158,124 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="10dp"
-                android:textSize="20dp"
-                android:textColor="@color/black"
                 android:text="তোমার উচ্চতা কত?"
-                />
+                android:textColor="@color/black"
+                android:textSize="20dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:weightSum="2"
-                >
-                <EditText
-                    android:inputType="number"
-                    android:textColor="@color/black"
-                    android:textColorHint="#989898"
-                    android:id="@+id/edFeet"
-                    android:layout_weight="1"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:hint="Feet"
-                    android:layout_margin="10dp"
-                    android:background="@color/white"
-                    android:lines="2"
-                    />
+                android:weightSum="2">
 
                 <EditText
-                    android:inputType="number"
-                    android:textColor="@color/black"
-                    android:textColorHint="#989898"
-                    android:id="@+id/edInch"
-                    android:layout_weight="1"
+                    android:id="@+id/edFeet"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:hint="Feet"
+                    android:inputType="number"
+                    android:lines="2"
+                    android:textColor="@color/black"
+                    android:textColorHint="#989898" />
+
+                <EditText
+                    android:id="@+id/edInch"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="@color/white"
                     android:gravity="center"
                     android:hint="Inch"
-                    android:layout_margin="10dp"
-                    android:background="@color/white"
+                    android:inputType="number"
                     android:lines="2"
-                    />
+                    android:textColor="@color/black"
+                    android:textColorHint="#989898" />
 
             </LinearLayout>
 
 
-
-
-
-
             <Button
                 android:id="@+id/btnResult"
-                android:backgroundTint="@color/darkBlue"
- android:textColor="@color/white"
-                android:layout_margin="10dp"
-                android:layout_gravity="center"
-                android:gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="20dp"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:backgroundTint="@color/darkBlue"
+                android:gravity="center"
                 android:text="BMI হিসাব করুন"
-                />
+                android:textColor="@color/white"
+                android:textSize="20dp" />
 
 
             <TextView
                 android:id="@+id/tvResult"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="20sp"
-                android:text=""
-                android:textStyle="bold"
+                android:layout_margin="5dp"
                 android:gravity="center"
-                android:layout_margin="10dp"
-                />
+                android:text=""
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:gravity="center">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:visibility="invisible"
+                    android:id="@+id/party_cat"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:scaleType="fitXY"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/party_cat" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:visibility="invisible"
+                    android:id="@+id/eating_cat"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:scaleType="fitXY"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/eating_cat" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:visibility="invisible"
+                    android:id="@+id/cat_workout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:scaleType="fitXY"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/cat_workout" />
+
+            </RelativeLayout>
 
             <ImageView
                 android:id="@+id/img"
-                android:visibility="gone"
-                android:layout_marginTop="20dp"
                 android:layout_width="match_parent"
-                android:layout_height="300dp"
+                android:layout_height="250dp"
                 android:src="@drawable/bmi_categories"
+                android:visibility="gone"
                 />
-
 
 
         </LinearLayout>
 
 
-
-
     </ScrollView>
-
 
 
 </LinearLayout>
